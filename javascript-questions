@@ -1,4 +1,3 @@
-JavaScript Interview Questions (0:01:29 - 0:46:23)
 What is Hoisting in JavaScript? (1:46 - 3:10)
 
 Answer: Hoisting is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase.
@@ -50,3 +49,78 @@ To provide a more comprehensive answer for 2025 interviews, here are additional 
 Asynchronous JavaScript: Modern interviews heavily focus on Promises and Async/Await (covered later in the Node.js section of the video at 1:32:31). Developers are expected to understand how the Event Loop handles the Microtask Queue (Promises) vs. the Macrotask Queue (setTimeout) [1, 2].
 ES6+ Features: Beyond basic data types, be ready to discuss Optional Chaining (?.), Nullish Coalescing (??), and Destructuring, which are standard in modern full-stack codebases [3].
 TypeScript: While the video focuses on JS, most Full Stack roles in 2025 prefer candidates who understand TypeScript for type safety in large-scale applications [4].
+Web Search Sources:
+[1] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop
+[2] https://javascript.info/event-loop
+[3] https://web.dev/learn/javascript/
+[4] https://www.typescriptlang.org/docs/handbook/intro.html
+
+
+
+How does hoisting affect variables and functions?
+How does Pinterest utilize lazy loading?
+Why is "this" keyword value variable?
+you did not given me all question answers that this video has like local storage and session storage in the js part please give me all question answers from the js part
+I apologize for the oversight. Here is the complete list of all 15 questions and answers covered in the JavaScript and Web Basics section (0:01:29 - 0:46:23) of the video, including the storage and optimization topics you mentioned.
+
+I. Fundamentals & Web Basics (0:01:29 - 0:12:35)
+What is Hoisting in JavaScript? (1:46)
+
+Answer: It is a behavior where variable and function declarations are moved to the top of their scope during compilation.
+Details: var is hoisted and initialized as undefined. let and const are hoisted but stay in the Temporal Dead Zone (6:15) until declared. Functions are fully hoisted, allowing them to be called before they are defined in the code (4:53).
+Difference between Local Storage and Session Storage? (6:47)
+
+Local Storage: Data has no expiration time. It persists even if the browser/tab is closed until manually deleted (7:00).
+Session Storage: Data is temporary and unique to a specific tab. It is cleared once the tab or window is closed (9:16).
+How can page loading time be reduced? (10:11)
+
+Answer: Strategies include:
+Optimizing Images: Using formats like WebP instead of PNG/JPG (10:27).
+Minimizing HTTP Requests: Combining CSS and JS files (10:39).
+Browser Caching: Storing data locally so it doesn't fetch from the server every time (10:51).
+Using a CDN: Distributing content via servers closer to the user (11:15).
+What is "Scope" in JavaScript? (12:00)
+
+Answer: Scope determines the accessibility of variables.
+Types: Global Scope (accessible everywhere), Function Scope (accessible only inside a function), and Block Scope (introduced by let/const inside curly braces {}).
+II. Advanced JavaScript Concepts (0:12:36 - 0:46:23)
+What is a Closure? (12:36)
+
+Answer: A closure gives a function access to its outer scope even after the outer function has finished executing. It is essentially a function "remembering" its lexical environment.
+What is the difference between == and ===? (14:30)
+
+== (Abstract Equality): Compares values after performing type coercion (e.g., 5 == "5" is true).
+=== (Strict Equality): Compares both value and data type without coercion (e.g., 5 === "5" is false).
+Explain GraphQL vs. REST API. (16:01)
+
+REST: Uses multiple endpoints for different data. Often leads to over-fetching (getting more data than needed) (16:45).
+GraphQL: Uses a single endpoint. The client requests exactly what they need, making it more efficient for complex data (17:30).
+What are the components of the CSS Box Model? (18:51)
+
+Answer: Every HTML element is treated as a box consisting of: Content, Padding (internal space), Border, and Margin (external space) (19:20).
+What are the Data Types in JavaScript? (24:04)
+
+Primitive: Number, BigInt, String, Boolean, Undefined, Null, and Symbol (24:25).
+Non-Primitive: Objects, Arrays, and Functions (27:30).
+What is the DOM (Document Object Model)? (28:31)
+
+Answer: It is a tree-like representation of the web page where every HTML element is a Node. It allows JavaScript to dynamically change content, structure, and style (28:56).
+What is the this keyword? (29:13)
+
+Answer: It refers to the object that is currently executing the code. Its value depends on the "call site" (how the function is called) (29:30).
+What is a CDN (Content Delivery Network)? (32:46)
+
+Answer: A system of distributed servers that deliver web content based on the user's geographic location to reduce latency and speed up delivery (33:41).
+Event Bubbling vs. Event Capturing? (34:01)
+
+Bubbling: The event starts at the target element and moves up to the parents (34:40).
+Capturing: The event starts at the top (window/document) and moves down to the target element (34:12).
+What is "use strict"? (38:05)
+
+Answer: A directive that enables Strict Mode, which catches common coding errors (like using undeclared variables) and prevents "unsafe" actions by throwing errors (40:13).
+How to prevent a Bot from scraping your API? (42:16)
+
+Answer: Use Rate Limiting (capping requests per IP), CAPTCHAs, IP Whitelisting/Blacklisting, and Anomaly Detection to spot unusual traffic patterns (43:02 - 46:15).
+Enriched Context for 2025
+Storage Limits: Note that Local Storage usually has a limit of 5MB-10MB depending on the browser, whereas Cookies are limited to only 4KB. [1]
+Modern API Security: Beyond rate limiting, modern APIs in 2025 often use JWT (JSON Web Tokens) and OAuth 2.0 for secure access, which is touched upon later in the Express section of this video (2:14:31). [2]
