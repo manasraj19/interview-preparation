@@ -1,0 +1,52 @@
+JavaScript Interview Questions (0:01:29 - 0:46:23)
+What is Hoisting in JavaScript? (1:46 - 3:10)
+
+Answer: Hoisting is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase.
+Key Detail: Only the declarations are hoisted, not the initializations. Using var results in undefined if accessed before declaration, while let and const are hoisted but remain in a "Temporal Dead Zone" (TDZ) until the line of declaration is reached.
+Difference between GraphQL and REST API? (16:01 - 18:50)
+
+Answer: While both handle data, REST uses multiple endpoints and often results in "over-fetching" (getting more data than needed). GraphQL uses a single endpoint where the client specifies exactly what data it needs, reducing data transfer and increasing flexibility.
+What are the components of the CSS Box Model? (18:51 - 24:03)
+
+Answer: Every element is a rectangular box. The components are:
+Content: The actual text or image.
+Padding: Space between the content and the border.
+Border: The edge surrounding the padding.
+Margin: The outermost space that separates the element from others.
+What are the Data Types in JavaScript? (24:04 - 28:30)
+
+Answer: JS has two main categories:
+Primitive (Immutable): Number, BigInt, String, Boolean, Undefined, Null, and Symbol.
+Non-Primitive (Mutable): Objects (including Arrays and Functions).
+What is the Document Object Model (DOM)? (28:31 - 29:12)
+
+Answer: The DOM is a programming interface for web documents. It represents the page as a tree structure (nodes) where each element (like or ) is a node that can be manipulated using JavaScript.
+What is the this keyword? (29:13 - 32:45)
+
+Answer: The this keyword refers to the current execution context. Its value changes depending on how a function is called (e.g., in a method, it refers to the owner object; in a regular function in non-strict mode, it refers to the global object).
+What is a Content Delivery Network (CDN) and why use it? (32:46 - 34:00)
+
+Answer: A CDN is a group of geographically distributed servers that speed up the delivery of web content by bringing it closer to where users are. It reduces latency and loading times for static assets like images and JS files.
+Difference between Event Bubbling and Event Capturing? (34:01 - 38:04)
+
+Answer:
+Capturing: The event starts from the root (top) and moves down to the target element.
+Bubbling: The event starts from the target element and moves up (bubbles) to the root. By default, most events in JS use bubbling.
+What is "use strict"? (38:05 - 40:40)
+
+Answer: It is a literal expression that enables "Strict Mode." It catches common coding bloopers, prevents the use of undeclared variables, and throws errors for "unsafe" actions that would otherwise be ignored by the engine.
+Difference between Cookies, Local Storage, and Session Storage? (40:41 - 42:15)
+
+Answer:
+Cookies: Small data stored for the server (usually for tracking/sessions); they expire.
+Local Storage: Stores data with no expiration date; remains even after the browser is closed.
+Session Storage: Data is cleared when the page session ends (tab is closed).
+How to prevent Bots from scraping a Public API? (42:16 - 46:23)
+
+Answer: Methods include Rate Limiting (limiting requests per IP), using CAPTCHAs, implementing Honey Pots (hidden elements bots interact with), and API Obfuscation.
+2025 Industry Context & Supplemental Information
+To provide a more comprehensive answer for 2025 interviews, here are additional concepts frequently paired with the questions above:
+
+Asynchronous JavaScript: Modern interviews heavily focus on Promises and Async/Await (covered later in the Node.js section of the video at 1:32:31). Developers are expected to understand how the Event Loop handles the Microtask Queue (Promises) vs. the Macrotask Queue (setTimeout) [1, 2].
+ES6+ Features: Beyond basic data types, be ready to discuss Optional Chaining (?.), Nullish Coalescing (??), and Destructuring, which are standard in modern full-stack codebases [3].
+TypeScript: While the video focuses on JS, most Full Stack roles in 2025 prefer candidates who understand TypeScript for type safety in large-scale applications [4].
